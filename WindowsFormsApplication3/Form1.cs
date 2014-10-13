@@ -86,7 +86,10 @@ namespace GameWare
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            Game selectedGame = (Game)listBox1.SelectedItem;
+            int id = selectedGame.id;
+            Downloader downloader = new Downloader(id);
+            downloader.Show();
         }
     }
 }
