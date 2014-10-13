@@ -16,13 +16,17 @@ namespace GameWare
 
         public Downloader(int id)
         {
-            InitializeComponent();
             this.id = id;
+            InitializeComponent();
+            webBrowser1.Url = new Uri("http://coolrom.com/dlpop.php?id=" + id);
+            webBrowser1.Visible = true;
+            webBrowser1.Show();
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            webBrowser1.Url = new Uri("http://coolrom.com/dlpop.php?id=" + id);
+           
+            
         }
     }
 }
